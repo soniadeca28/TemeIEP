@@ -10,7 +10,7 @@ public:
     Cat();
     Cat(std::string name, std::string gender, int age, bool isPureBreed,
     bool isLitterBoxTrained, std::string furLength, std::string furColour);
-    Cat(const Cat &cat);
+    Cat(const Cat &cat) = delete;
     ~Cat();
     bool getIsLitterBoxTrained();
     std::string getFurLength();

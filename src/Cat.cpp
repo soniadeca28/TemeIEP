@@ -15,13 +15,13 @@ Cat::Cat(std::string name, std::string gender, int age, bool isPureBreed,
     furLength_ = furLength;
     furColour_ = furColour;
 }
-
+/*
 Cat::Cat(const Cat &cat) : Pet(cat)
 {
     isLitterBoxTrained_ = cat.isLitterBoxTrained_;
     furLength_ = cat.furLength_;
     furColour_ = cat.furColour_;
-}   
+}*/   
 
 Cat::~Cat()
 {

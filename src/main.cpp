@@ -9,11 +9,11 @@ int main()
     Cat kitty("Mrs. Paw","Female",2,false,true,"short","white");
     kitty.printInfo();
     std::cout<<std::endl;
-
+    /*
     std::cout<<"Copy cat through copy constructor:"<<std::endl;
     Cat copyCat(kitty);
     copyCat.printInfo();
-    std::cout<<std::endl;
+    std::cout<<std::endl;*/
 
     std::cout<<"Doggo:"<<std::endl;
     Dog doggo("Cookies","Male",3,false,4,"long","black");
