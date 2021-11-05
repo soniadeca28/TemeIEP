@@ -19,6 +19,9 @@ public:
     virtual std::string getFurLength() { return ""; }
     virtual std::string getFurColour() { return ""; }
     virtual bool getIsLitterBoxTrained() { return 0; }
+    virtual std::string getCoatLength() { return ""; }
+    virtual std::string getCoatColour() { return ""; }
+    virtual int getWalksPerDay() { return 0; }
 
 protected:
     std::string name_;
