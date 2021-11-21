@@ -7,13 +7,14 @@ class Pet
 {
 public:
     Pet();
-    Pet(std::string name, std::string gender, int age, bool isPureBreed);
+    Pet(std::string name, std::string gender, int age, bool isPureBreed, std::string image);
     Pet(const Pet &pet);
     virtual ~Pet() = 0;
     std::string getName();
     std::string getGender();
     int getAge();
     bool getIsPureBreed();
+    std::string getImage();
     Pet &operator=(const Pet &pet);
     virtual void printInfo();
     virtual std::string getFurLength() { return ""; }
@@ -28,6 +29,7 @@ protected:
     std::string gender_;
     int age_;
     bool isPureBreed_;
+    std::string *image_;
 };
 
 #endif

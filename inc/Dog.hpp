@@ -8,7 +8,7 @@ class Dog : public Pet
 {
 public:
     Dog();
-    Dog(std::string name, std::string gender, int age, bool isPureBreed,
+    Dog(std::string name, std::string gender, int age, bool isPureBreed,std::string image,
     int walksPerDay, std::string coatLength, std::string coatColour);
     Dog(const Dog &dog);
     ~Dog();

@@ -7,15 +7,18 @@ Pet::Pet()
     gender_ = "Female";
     age_ = 0;
     isPureBreed_ = 0;
+    image_ = new std::string;
 }
 
-Pet::Pet(std::string name, std::string gender, int age, bool isPureBreed)
+Pet::Pet(std::string name, std::string gender, int age, bool isPureBreed, std::string image)
 {
     std::cout<<"Created a pet !"<<std::endl;
     name_ = name;
     gender_ = gender;
     age_ = age;
     isPureBreed_ = isPureBreed;
+    image_ = new std::string(image);
+    
 }
 
 Pet::Pet(const Pet &pet)
@@ -25,11 +28,14 @@ Pet::Pet(const Pet &pet)
     gender_ = pet.gender_;
     age_ = pet.age_;
     isPureBreed_ = pet.isPureBreed_;
+    image_ = new std::string(*pet.image_);
+    
 }
 
 Pet::~Pet()
 {
     std::cout<<"Pet destructor"<<std::endl;
+    delete image_;
 }
 
 std::string Pet::getName()
@@ -52,12 +58,26 @@ bool Pet::getIsPureBreed()
     return isPureBreed_;
 }
 
+std::string Pet::getImage()
+{
+    return *image_;
+}
+
 Pet &Pet::operator=(const Pet &pet)
 {
+    if( this == &pet)
+    {
+        return *this;
+    }
+
     name_ = pet.name_;
     gender_ = pet.gender_;
     age_ = pet.age_;
     isPureBreed_ = pet.isPureBreed_;
+    std::string *originalImage = image_;
+    image_ = new std::string(*pet.image_);
+    delete originalImage;
+
     return *this;
 }
 
@@ -66,6 +86,7 @@ void Pet::printInfo()
     std::cout<<"Pet name : "<<name_<<std::endl
              <<"Pet gender : "<<gender_<<std::endl
              <<"Pet age : "<<age_<<std::endl
-             <<"Is the pet pure breed : "<<std::boolalpha<<isPureBreed_<<std::endl;
+             <<"Is the pet pure breed : "<<std::boolalpha<<isPureBreed_<<std::endl
+             <<*image_<<std::endl;
 }
 

@@ -7,9 +7,9 @@ Dog::Dog() : Pet()
     coatColour_ = "black";
 }
 
-Dog::Dog(std::string name, std::string gender, int age, bool isPureBreed,
+Dog::Dog(std::string name, std::string gender, int age, bool isPureBreed, std::string image,
     int walksPerDay, std::string coatLength, std::string coatColour) : 
-    Pet(name, gender, age, isPureBreed)
+    Pet(name, gender, age, isPureBreed, image)
 {
     walksPerDay_ = walksPerDay;
     coatLength_ = coatLength;

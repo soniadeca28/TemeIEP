@@ -7,21 +7,21 @@ Cat::Cat() : Pet()
     furColour_ = "Grey";
 }
 
-Cat::Cat(std::string name, std::string gender, int age, bool isPureBreed,
+Cat::Cat(std::string name, std::string gender, int age, bool isPureBreed, std::string image,
     bool isLitterBoxTrained, std::string furLength, std::string furColour) : 
-    Pet(name, gender, age, isPureBreed)
+    Pet(name, gender, age, isPureBreed, image)
 {
     isLitterBoxTrained_ = isLitterBoxTrained;
     furLength_ = furLength;
     furColour_ = furColour;
 }
-/*
+
 Cat::Cat(const Cat &cat) : Pet(cat)
 {
     isLitterBoxTrained_ = cat.isLitterBoxTrained_;
     furLength_ = cat.furLength_;
     furColour_ = cat.furColour_;
-}*/   
+}
 
 Cat::~Cat()
 {

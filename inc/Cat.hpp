@@ -8,9 +8,9 @@ class Cat : public Pet
 {
 public:
     Cat();
-    Cat(std::string name, std::string gender, int age, bool isPureBreed,
+    Cat(std::string name, std::string gender, int age, bool isPureBreed, std::string image,
     bool isLitterBoxTrained, std::string furLength, std::string furColour);
-    Cat(const Cat &cat) = delete;
+    Cat(const Cat &cat); // = delete;
     ~Cat();
     bool getIsLitterBoxTrained();
     std::string getFurLength();
