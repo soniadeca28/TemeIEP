@@ -7,7 +7,7 @@ Pet::Pet()
     gender_ = "Female";
     age_ = 0;
     isPureBreed_ = 0;
-    image_ = new std::string;
+    image_ = new std::string("blank.jpg");
 }
 
 Pet::Pet(std::string name, std::string gender, int age, bool isPureBreed, std::string image)
