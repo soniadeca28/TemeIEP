@@ -67,6 +67,7 @@ Pet &Pet::operator=(const Pet &pet)
 {
     if( this == &pet)
     {
+        std::cout<<"Same object !!\n";
         return *this;
     }
 

@@ -59,5 +59,5 @@ void Cat::printInfo()
     Pet::printInfo();
     std::cout<<"Is the pet litterbox trained: "<<std::boolalpha<<isLitterBoxTrained_<<std::endl
             <<"Pet fur length: "<<furLength_<<std::endl
-            <<"Pet fur colour: "<<furColour_<<std::endl;
+            <<"Pet fur colour: "<<furColour_<<std::endl<<std::endl;
 }

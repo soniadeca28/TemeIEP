@@ -4,7 +4,7 @@ Dog::Dog() : Pet()
 {
     walksPerDay_ = 3;
     coatLength_ = "short";
-    coatColour_ = "black";
+    coatColour_ = "grey";
 }
 
 Dog::Dog(std::string name, std::string gender, int age, bool isPureBreed, std::string image,
@@ -59,5 +59,5 @@ void Dog::printInfo()
     Pet::printInfo();
     std::cout<<"How many walks per day does this pet need: "<<walksPerDay_<<std::endl
             <<"Pet coat length: "<<coatLength_<<std::endl
-            <<"Pet coat colour: "<<coatColour_<<std::endl;
+            <<"Pet coat colour: "<<coatColour_<<std::endl<<std::endl;
 }
