@@ -2,6 +2,7 @@
 #define PET_HPP
 
 #include<iostream>
+#include <memory>
 
 class Pet
 {

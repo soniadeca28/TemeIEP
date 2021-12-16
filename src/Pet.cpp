@@ -3,7 +3,7 @@
 Pet::Pet()
 {
     std::cout<<"Created a pet !"<<std::endl;
-   name_ = "No Name";
+    name_ = "No Name";
     gender_ = "Female";
     age_ = 0;
     isPureBreed_ = 0;
@@ -36,6 +36,8 @@ Pet::~Pet()
 {
     std::cout<<"Pet destructor"<<std::endl;
     delete image_;
+    std::cout<<"Deleted image"<<std::endl;
+    std::cout<<std::endl;
 }
 
 std::string Pet::getName()
